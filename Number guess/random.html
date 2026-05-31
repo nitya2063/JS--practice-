@@ -1,0 +1,49 @@
+<html>
+   <head>
+      <title>Number guessing</title>
+   </head>
+
+   <body>
+
+      <div class="container">
+
+         <h1>Guess The Number</h1>
+
+         <input type="number" id="num" placeholder="Enter number">
+
+         <br><br>
+
+         <button onclick="checkNumber()">Check</button>
+
+         <p id="result"></p>
+
+      </div>
+
+      <script>
+
+         let a = Math.floor(Math.random() * 1000);
+
+         function checkNumber(){
+
+            let num = Number(document.getElementById("num").value);
+
+            if(num == a){
+               document.getElementById("result").innerHTML =
+               "You guessed the correct number";
+            }
+
+            else if(num < a){
+               document.getElementById("result").innerHTML =
+               "You guessed smaller number";
+            }
+
+            else{
+               document.getElementById("result").innerHTML =
+               "You guessed the larger number";
+            }
+         }
+
+      </script>
+
+   </body>
+</html>
